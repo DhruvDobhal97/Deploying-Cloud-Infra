@@ -1,0 +1,25 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      python: 3.9
+    commands:
+      - echo Installing dependencies...
+      - pip install -r requirements.txt
+  build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - $(aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 975050323365.dkr.ecr.us-east-1.amazonaws.com)
+      - echo Building the Docker image...
+      - docker build -t dobhal-flask-app .
+      - echo Tagging the Docker image...
+      - docker tag dobhal-flask-app:latest 975050323365.dkr.ecr.us-east-1.amazonaws.com/dobhal-flask-app:latest
+      - echo Pushing the Docker image to Amazon ECR...
+      - docker push 975050323365.dkr.ecr.us-east-1.amazonaws.com/dobhal-flask-app:latest
+      - echo Creating imageDefinitions.json for ECS deployment...
+      - echo '[{"name":"dobhal-flask-app","imageUri":"975050323365.dkr.ecr.us-east-1.amazonaws.com/dobhal-flask-app:latest"}]' > imageDefinitions.json
+artifacts:
+  files:
+    - app.py
+    - requirements.txt
+    - imageDefinitions.json
