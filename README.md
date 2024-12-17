@@ -58,11 +58,11 @@ By combining **Docker**, **CI/CD pipelines**, and **Terraform**, this project hi
      ```bash
      aws configure
      ```
-     Input the following:
-AWS Access Key ID
-AWS Secret Access Key
-Default region name (e.g., us-east-1)
-Output format (e.g., json)
+## **Input the following:**     
+-AWS Access Key ID
+-AWS Secret Access Key
+-Default region name (e.g., us-east-1)
+-Output format (e.g., json)
 
 ---
 
