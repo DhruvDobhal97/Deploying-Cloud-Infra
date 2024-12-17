@@ -77,3 +77,41 @@ docker run -p 5000:5000 flask-app
 # Verify
 curl http://localhost:5000
 
+2. AWS Deployment Using Terraform
+Step 2.1: Initialize Terraform
+2. AWS Deployment Using Terraform
+Step 2.1: Initialize Terraform
+
+Step 2.2: Review Deployment Plan
+# Preview Terraform Plan
+terraform plan
+
+Step 2.3: Apply Terraform Configuration
+# Apply Terraform Changes
+terraform apply -auto-approve
+
+Step 2.4: Push Docker Image to Amazon ECR
+# Authenticate Docker to ECR
+aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin <aws_account_id>.dkr.ecr.us-east-1.amazonaws.com
+
+# Build, Tag, and Push Docker Image
+docker build -t flask-app .
+docker tag flask-app:latest <aws_account_id>.dkr.ecr.us-east-1.amazonaws.com/flask-app:latest
+docker push <aws_account_id>.dkr.ecr.us-east-1.amazonaws.com/flask-app:latest
+
+Step 2.5: Deploy ECS Fargate Service
+Update ECS Task Definition to pull the image from ECR.
+Ensure the ECS Service is running in your private subnet.
+
+Step 2.6: Verify the Application
+# Retrieve the ALB DNS Name
+aws elbv2 describe-load-balancers --query 'LoadBalancers[*].DNSName' --output text
+
+# Verify the Application via ALB DNS
+curl http://<alb-dns-name>
+
+3. Clean Up AWS Resources
+terraform destroy
+
+
+
