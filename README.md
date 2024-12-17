@@ -61,12 +61,8 @@ By combining **Docker**, **CI/CD pipelines**, and **Terraform**, this project hi
 ---
 
 ## **Setup Instructions**
-### **1. Clone the Repository**
-# Clone the repository
-git clone https://github.com/yourusername/Cloud-Microservices-Deployment.git
-cd Cloud-Microservices-Deployment
 
-### **2. Dockerize the Flask Application**
+### **1. Dockerize the Flask Application**
 ```bash
 # Clone the Repository
 git clone https://github.com/yourusername/Cloud-Microservices-Deployment.git
@@ -80,5 +76,4 @@ docker run -p 5000:5000 flask-app
 
 # Verify
 curl http://localhost:5000
-
 
