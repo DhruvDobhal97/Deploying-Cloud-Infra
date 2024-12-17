@@ -77,16 +77,17 @@ docker run -p 5000:5000 flask-app
 # Verify
 curl http://localhost:5000
 
-2. AWS Deployment Using Terraform
+### **2. AWS Deployment Using Terraform**
+
 Step 2.1: Initialize Terraform
 2. AWS Deployment Using Terraform
 Step 2.1: Initialize Terraform
 
-Step 2.2: Review Deployment Plan
+### ** Step 2.2: Review Deployment Plan**
 # Preview Terraform Plan
 terraform plan
 
-Step 2.3: Apply Terraform Configuration
+### ** Step 2.3: Apply Terraform Configuration**
 # Apply Terraform Changes
 terraform apply -auto-approve
 
