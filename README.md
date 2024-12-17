@@ -61,7 +61,7 @@ By combining **Docker**, **CI/CD pipelines**, and **Terraform**, this project hi
 ---
 
 ## **Setup Instructions**
-### **1. Clone the Repository
+### **1. Clone the Repository**
 # Clone the repository
 git clone https://github.com/yourusername/Cloud-Microservices-Deployment.git
 cd Cloud-Microservices-Deployment
