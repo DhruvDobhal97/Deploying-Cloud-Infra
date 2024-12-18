@@ -126,4 +126,63 @@ curl http://<alb-dns-name>
 terraform destroy
 ```
 
+### **Essential Terraform Commands**
+### **1. Initialize Terraform**
+- **Purpose**: Initializes the Terraform working directory, downloads required provider plugins, and sets up the backend.
+```bash
+terraform init
+```
 
+### **2. Review Terraform Configuration**
+- **Purpose**: Validates the Terraform configuration files for syntax and logical errors.
+```bash
+terraform validate
+```
+### **3. Preview the Infrastructure Plan**
+- **Purpose**: Displays the changes Terraform will make to your infrastructure before applying them.
+```bash
+terraform plan
+```
+### **4. Apply Terraform Changes**
+- **Purpose**: Creates or updates the resources defined in the Terraform configuration files.
+```bash
+terraform apply -auto-approve
+```
+- **Flag**:
+- **auto-approve**: Skips manual confirmation prompts.
+### **5. Show Current State**
+- **Purpose**: Displays the current state of all managed resources.
+```bash
+terraform show
+```
+### **6. Destroy Resources**
+- **Purpose**: Deletes all resources provisioned by Terraform.
+```bash
+terraform destroy -auto-approve
+```
+-**Flag**:
+auto-approve Skips confirmation prompts.
+### **7. Format Configuration Files**
+- **Purpose**: Formats the Terraform configuration files to a canonical style.
+```bash
+terraform fmt
+```
+### **8. Check Resource State**
+- **Purpose**: Verifies the resource state and provides information about specific managed resources.
+```bash
+terraform state list
+```
+- **Example**: To view details of a specific resource:
+```bash
+terraform state show <resource_name>
+```
+### **9. Output Values**
+- **Purpose**: Displays the values of output variables defined in the configuration.
+```bash
+terraform output
+```
+### **10. Refresh State**
+- **Purpose**: Updates the Terraform state file to match the real infrastructure.
+```bash
+terraform refresh
+```
