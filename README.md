@@ -1,12 +1,12 @@
 # Deploying-Cloud-Infra
-Welcome to the Cloud Microservices Deployment project! This project showcases a Python Flask-based microservice deployed across leading cloud platforms: AWS ECS Fargate, GCP Cloud Run, and Azure Container Instances. By leveraging containerization with Docker and automated CI/CD pipelines, this project demonstrates a secure, highly available, and scalable cloud architecture.
+Welcome to the Cloud Microservices Deployment project! This project showcases a Python Flask-based microservice deployed across leading cloud platform: AWS ECS Fargate. By leveraging containerization with Docker and automated CI/CD pipelines, this project demonstrates a secure, highly available, and scalable cloud architecture.
 
 The goal of this project is to highlight the use of cloud-native tools and Well-Architected Framework principles (Operational Excellence, Security, Reliability, Performance Efficiency, and Cost Optimization) in deploying microservices.
 
-This project uses Docker containerization and CI/CD pipelines to streamline deployment on **AWS**, **GCP**, and **Azure**.
+This project uses Docker containerization and CI/CD pipelines to streamline deployment on **AWS**.
 # Cloud Microservices Deployment - Flask Application 🚀
 
-This repository contains a **Python Flask microservice** deployed across **AWS ECS Fargate**, **GCP Cloud Run**, and **Azure Container Instances**. The infrastructure for AWS is provisioned using **Terraform**, ensuring repeatable, reliable, and automated deployments.
+This repository contains a **Python Flask microservice** deployed across **AWS ECS Fargate**. The infrastructure for AWS is provisioned using **Terraform**, ensuring repeatable, reliable, and automated deployments.
 
 ---
 
@@ -29,7 +29,7 @@ By combining **Docker**, **CI/CD pipelines**, and **Terraform**, this project hi
 1. **Multi-Cloud Deployment**: AWS, GCP, and Azure.
 2. **Infrastructure as Code (IaC)**: AWS infrastructure deployed using **Terraform**.
 3. **Containerization**: Dockerized Flask application.
-4. **CI/CD Pipelines**: AWS CodePipeline and GCP Cloud Build.
+4. **CI/CD Pipelines**: AWS CodePipeline.
 5. **High Availability**: Load Balancers, Auto-Scaling, and private subnets.
 6. **Security**: VPC, security groups, container security scanning.
 
@@ -39,17 +39,17 @@ By combining **Docker**, **CI/CD pipelines**, and **Terraform**, this project hi
 - **Programming**: Python (Flask)
 - **Containerization**: Docker
 - **IaC**: Terraform
-- **CI/CD**: AWS CodePipeline, GCP Cloud Build
-- **Orchestration**: AWS ECS Fargate, GCP Cloud Run, Azure Container Instances
+- **CI/CD**: AWS CodePipeline
+- **Orchestration**: AWS ECS Fargate
 - **Networking**: ALB, VPC, Subnets, Security Groups
-- **Container Registry**: Amazon ECR, GCP Artifact Registry, Azure Container Registry
+- **Container Registry**: Amazon ECR
 
 ---
 
 ## **Prerequisites**
 1. **Install Required Tools**:
    - **Terraform**: [Install Guide](https://learn.hashicorp.com/tutorials/terraform/install-cli)
-   - AWS CLI, GCP SDK, and Azure CLI
+   - AWS CLI
    - Docker
    - Python 3.x
 
